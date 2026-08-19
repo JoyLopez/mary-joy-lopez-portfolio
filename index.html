@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mary Joy Lopez — Software QA Engineer & Computer Engineer</title>
+<meta name="description" content="Mary Joy Lopez — Software QA Engineer, Computer Engineer, Automation & Manual Tester. Portfolio, projects, and experience." />
+
+<!-- Google Fonts: Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- AOS Animation -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          void: '#0a0505',
+          panel: '#1a0d0d',
+          red: { accent: '#e10600' },
+          crimson: { accent: '#ff3b3f' },
+          onyx: { accent: '#3a3a3a' },
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          display: ['Space Grotesk', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+<!-- Local stylesheets -->
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/cursor.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+<link rel="stylesheet" href="css/mascot.css" />
+
+</head>
+
+<body class="antialiased">
+
+<!-- Loader -->
+<div id="loader"><div class="loader-ring"></div></div>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Three.js Background Particles (unused while Vanta Birds is active — kept for future toggling) -->
+<canvas id="bg-canvas" style="display:none;"></canvas>
+<!-- Mouse-interactive meteor shower overlay (unused while Vanta Birds is active) -->
+<canvas id="meteor-canvas" style="position:fixed; inset:0; z-index:0; pointer-events:none; display:none;"></canvas>
+<!-- Interactive bird flock background (dark mode) -->
+<div id="vanta-birds" class="fixed inset-0" style="z-index:0; display:none;"></div>
+<!-- Interactive sky background (light mode) -->
+<div id="vanta-sky" class="fixed inset-0" style="z-index:0; display:none;"></div>
+
+<!-- ============ HEADER / NAVBAR ============ -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 py-4">
+  <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+    <a href="#home" class="font-display text-2xl font-bold tracking-wide">
+      JOY<span class="text-red-500">.</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-9 text-sm font-medium text-gray-300">
+      <li><a href="#home" class="nav-link active" data-nav>Home</a></li>
+      <li><a href="#about" class="nav-link" data-nav>About</a></li>
+      <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
+      <li><a href="#experience" class="nav-link" data-nav>Experience</a></li>
+      <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
+      <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+    </ul>
+
+    <div class="flex items-center gap-4">
+      <!-- From Uiverse.io by RiccardoRapelli -->
+      <label class="switch">
+        <input id="input" type="checkbox" checked>
+        <div class="slider">
+          <div class="sun-moon">
+            <i class="dots"></i>
+          </div>
+          <div class="rays"></div>
+          <div class="clouds dark"></div>
+          <div class="clouds light"></div>
+          <div class="stars">
+            <i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+      </label>
+      <a href="assets/documents/Mary_Joy_Lopez_Software_QA_Engineer_CV.pdf" download class="ripple-btn hidden sm:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full glass hover:border-red-500/50 transition-all">
+        <i class="fa-solid fa-download text-red-500"></i> Resume
+      </a>
+      <button id="mobileBtn" class="md:hidden text-xl text-gray-200"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden hidden flex-col gap-1 px-6 py-4 mt-2 mx-4 rounded-2xl glass">
+    <a href="#home" class="py-3 border-b border-white/5" data-nav-mobile>Home</a>
+    <a href="#about" class="py-3 border-b border-white/5" data-nav-mobile>About</a>
+    <a href="#projects" class="py-3 border-b border-white/5" data-nav-mobile>Projects</a>
+    <a href="#experience" class="py-3 border-b border-white/5" data-nav-mobile>Experience</a>
+    <a href="#skills" class="py-3 border-b border-white/5" data-nav-mobile>Skills</a>
+    <a href="#contact" class="py-3" data-nav-mobile>Contact</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative min-h-screen flex items-center pt-28 md:pt-0 z-10">
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center w-full relative z-10">
+    <!-- Left -->
+    <div data-aos="fade-right" data-aos-duration="900">
+      <p class="text-red-500 font-medium mb-4 flex items-center gap-2">
+        <span class="w-8 h-[2px] bg-red-500"></span> Hello, I'm
+      </p>
+      <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-4">
+        <span class="gradient-text">Mary Joy Lopez</span>
+      </h1>
+      <h2 class="text-xl sm:text-2xl font-medium text-gray-300 mb-6 h-9">
+        <span id="typed"></span><span class="text-red-500">|</span>
+      </h2>
+      <p class="text-sm sm:text-base font-semibold tracking-wide text-red-500 mb-4">
+        <span class="text-red-500">|</span> Quality isn't an accident — it's a habit I test for.
+      </p>
+      <p class="text-gray-400 max-w-lg mb-10 leading-relaxed">
+         I build reliable software by finding problems before users do.
+         I help ensure applications meet quality standards through thorough
+         testing, defect analysis, and continuously expanding my expertise
+         in test automation.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact" class="ripple-btn hire-me-btn px-8 py-4 rounded-full font-semibold text-void transition-transform">
+          Hire Me
+        </a>
+        <a href="#projects" class="ripple-btn px-8 py-4 rounded-full font-semibold glass hover:border-red-500/50 transition-all">
+          View Projects
+        </a>
+      </div>
+
+      <div class="flex gap-6 mt-12 text-gray-400">
+        <a href="https://github.com/JoyLopez" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-colors text-lg" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/maryjoy-lopez-925635349/" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-colors text-lg" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/maryjoy.lopez.50364592/" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-colors text-lg" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="mailto:yhadnielopez@gmail.com" class="hover:text-red-500 transition-colors text-lg" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- Right: Portrait -->
+    <div class="relative flex justify-center items-center" data-aos="fade-left" data-aos-duration="900">
+      <div class="absolute w-[340px] h-[340px] md:w-[420px] md:h-[420px] rounded-full bg-red-600 opacity-[0.22] blur-3xl"></div>
+      <div id="portraitCard" class="portrait-card relative w-72 sm:w-80 md:w-96 rounded-[2rem] glass p-3 shadow-2xl">
+        <img id="profilePhoto" src="assets/images/profile-image.jpg" alt="profile portrait" class="rounded-[1.6rem] w-full h-[420px] object-cover" />
+        <div class="absolute -bottom-5 -left-5 glass rounded-2xl px-4 py-3 flex items-center gap-3">
+          <span class="w-3 h-3 rounded-full bg-green-400 animate-pulse"></span>
+          <span class="text-sm font-medium">Available for work</span>
+        </div>
+        <div class="absolute -top-5 -right-5 glass rounded-2xl px-4 py-3">
+          <i class="fa-solid fa-check-double text-green-400"></i>
+          <span class="text-sm font-medium ml-1">Quality Comes First.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400 animate-bounce">
+    <i class="fa-solid fa-chevron-down text-xl"></i>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="relative py-32 z-10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="section-eyebrow text-red-500 text-xs font-semibold uppercase mb-3">Get to know me</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold">About <span class="gradient-text">Me</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-16 items-start">
+      <div data-aos="fade-right">
+        <h3 class="font-display text-2xl font-semibold mb-4">Who I Am</h3>
+        <p class="text-gray-400 leading-relaxed mb-6">
+        I'm Mary Joy Lopez, a Software QA Engineer with a background in Computer Engineering. 
+        I enjoy solving problems by identifying defects, analyzing software behavior, and ensuring applications work as intended. 
+        I believe the best software isn't just functional—it's reliable, consistent, and built with quality in mind.
+        </p>
+        <h3 class="font-display text-2xl font-semibold mb-4">My Passion</h3>
+        <p class="text-gray-400 leading-relaxed mb-6">
+          To me, Quality Assurance is about more than finding bugs. It's about understanding how software behaves,
+          thinking like a user, and uncovering issues before they become real-world problems. 
+          I value clear communication, attention to detail, and continuous improvement in every project I work on.
+        </p>
+        <h3 class="font-display text-2xl font-semibold mb-4">My Journey</h3>
+        <p class="text-gray-400 leading-relaxed">
+          With 2+ years of experience in Software Quality Assurance, 
+          I've worked on manual testing, executing test cases, reporting defects, 
+          and collaborating with development teams to improve product quality. As I continue to grow, 
+          I'm strengthening my skills in Playwright, Python, and test automation to build more efficient and reliable testing solutions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div class="tilt-card glass glow-border rounded-2xl p-8 text-center" data-aos="zoom-in" data-aos-delay="0">
+          <p class="font-display text-4xl font-bold gradient-text mb-2" data-count="2">0</p>
+          <p class="text-gray-400 text-sm">Years Experience</p>
+        </div>
+        <div class="tilt-card glass glow-border rounded-2xl p-8 text-center" data-aos="zoom-in" data-aos-delay="1000">
+          <p class="font-display text-4xl font-bold gradient-text mb-2" data-count="1000">0</p>
+          <p class="text-gray-400 text-sm">Test Cases Executed</p>
+        </div>
+        <div class="tilt-card glass glow-border rounded-2xl p-8 text-center" data-aos="zoom-in" data-aos-delay="200">
+          <p class="font-display text-4xl font-bold gradient-text mb-2" data-count="200">0</p>
+          <p class="text-gray-400 text-sm">Features Ticket Tested</p>
+        </div>
+        <div class="tilt-card glass glow-border rounded-2xl p-8 text-center" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fa-solid fa-vial-circle-check text-3xl gradient-text mb-2"></i>
+          <p class="text-gray-400 text-sm">QA Testing</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="relative py-32 z-10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="section-eyebrow text-red-500 text-xs font-semibold uppercase mb-3">What I work with</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold">My <span class="gradient-text">Skills</span></h2>
+    </div>
+
+    <div id="skillsGrid">
+      <!-- injected by js/projects.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="relative py-32 z-10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="section-eyebrow text-red-500 text-xs font-semibold uppercase mb-3">Selected work</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold">Featured <span class="gradient-text">Projects</span></h2>
+    </div>
+
+    <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="relative py-32 z-10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-20" data-aos="fade-up">
+      <p class="section-eyebrow text-red-500 text-xs font-semibold uppercase mb-3">Where I've been</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold">Work <span class="gradient-text">Experience</span></h2>
+    </div>
+
+    <div class="relative max-w-3xl mx-auto" id="timelineWrap">
+      <div class="timeline-line absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] md:-translate-x-1/2"></div>
+      <div id="timelineItems" class="space-y-14"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="relative py-32 z-10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="section-eyebrow text-red-500 text-xs font-semibold uppercase mb-3">How I can help</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold">My <span class="gradient-text">Services</span></h2>
+    </div>
+
+    <div id="servicesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials" class="relative py-32 z-10 overflow-hidden">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="section-eyebrow text-red-500 text-xs font-semibold uppercase mb-3">Kind words</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold">Testimonials</h2>
+    </div>
+
+    <div class="relative">
+      <div id="testimonialTrack" class="glass glow-border rounded-3xl p-10 md:p-14 text-center transition-all duration-500">
+        <!-- injected -->
+      </div>
+      <div class="flex justify-center gap-3 mt-8" id="testimonialDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="relative py-32 z-10">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div data-aos="fade-right">
+      <p class="section-eyebrow text-red-500 text-xs font-semibold uppercase mb-3">Get in touch</p>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold mb-6 leading-tight">
+        Let's Build Something <span class="gradient-text">Great Together</span>
+      </h2>
+      <p class="text-gray-400 max-w-md leading-relaxed mb-10">
+       Whether you need a Software QA Engineer to ensure quality or a Web Developer to bring ideas to life,
+      I'd love to discuss your project or opportunity.
+      </p>
+
+      <div class="space-y-5">
+        <div class="flex items-center gap-4">
+          <span class="w-12 h-12 rounded-full glass flex items-center justify-center text-red-500"><i class="fa-solid fa-envelope"></i></span>
+          <span class="text-gray-300">yhadnielopez@gmail.com</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="w-12 h-12 rounded-full glass flex items-center justify-center text-red-500"><i class="fa-solid fa-location-dot"></i></span>
+          <span class="text-gray-300">Philippines · Open to Remote</span>
+        </div>
+      </div>
+    </div>
+
+    <form id="contactForm" class="glass glow-border rounded-3xl p-8 md:p-10 space-y-6" data-aos="fade-left">
+      <div class="relative">
+        <input type="text" required id="nameInput" placeholder=" " class="peer w-full bg-white/5 border border-white/10 rounded-xl px-4 pt-6 pb-2 outline-none focus:border-red-500 transition-colors" />
+        <label for="nameInput" class="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-focus:top-2 peer-focus:text-xs peer-focus:text-red-500 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs">Name</label>
+      </div>
+      <div class="relative">
+        <input type="email" required id="emailInput" placeholder=" " class="peer w-full bg-white/5 border border-white/10 rounded-xl px-4 pt-6 pb-2 outline-none focus:border-red-500 transition-colors" />
+        <label for="emailInput" class="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-focus:top-2 peer-focus:text-xs peer-focus:text-red-500 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs">Email</label>
+      </div>
+      <div class="relative">
+        <input type="text" required id="subjectInput" placeholder=" " class="peer w-full bg-white/5 border border-white/10 rounded-xl px-4 pt-6 pb-2 outline-none focus:border-red-500 transition-colors" />
+        <label for="subjectInput" class="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-focus:top-2 peer-focus:text-xs peer-focus:text-red-500 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs">Subject</label>
+      </div>
+      <div class="relative">
+        <textarea required id="messageInput" rows="4" placeholder=" " class="peer w-full bg-white/5 border border-white/10 rounded-xl px-4 pt-6 pb-2 outline-none focus:border-red-500 transition-colors resize-none"></textarea>
+        <label for="messageInput" class="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-focus:top-2 peer-focus:text-xs peer-focus:text-red-500 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs">Message</label>
+      </div>
+      <button type="submit" class="ripple-btn w-full py-4 rounded-xl font-semibold bg-red-600 text-void hover:bg-red-500 transition-colors">
+        Send Message
+      </button>
+      <p id="formNote" class="text-center text-sm text-gray-500"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="relative z-10 border-t border-white/5 py-10">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+    <a href="#home" class="font-display text-xl font-bold">JOY<span class="text-red-500">.</span></a>
+    <p class="text-gray-500 text-sm">&copy; <span id="year"></span> Mary Joy Lopez. All rights reserved.</p>
+    <div class="flex gap-5 text-gray-400">
+      <a href="https://github.com/JoyLopez" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-colors" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/maryjoy-lopez-925635349/" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/maryjoy.lopez.50364592/" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="mailto:yhadnielopez@gmail.com" class="hover:text-red-500 transition-colors" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" class="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full glass flex items-center justify-center text-red-500 opacity-0 pointer-events-none transition-all duration-300">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ============ JOY AI — Chat Widget ============ -->
+<div id="aiWidget" data-ai-theme="dark">
+
+  <!-- Floating toggle button -->
+  <button id="aiToggleBtn" class="ai-toggle-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="aiChatWindow" aria-label="Open JOY AI assistant">
+    <span class="ai-ring"></span>
+    <i class="fa-solid fa-robot"></i>
+    <span class="ai-badge" id="aiBadge"></span>
+  </button>
+
+  <!-- Chat window -->
+  <div id="aiChatWindow" class="ai-chat-window" role="dialog" aria-modal="false" aria-label="JOY AI chat" data-lenis-prevent>
+    <div class="ai-header">
+      <div class="ai-p" style="left:20%; animation-delay:0s;"></div>
+      <div class="ai-p" style="left:55%; animation-delay:2s;"></div>
+      <div class="ai-p" style="left:80%; animation-delay:4s;"></div>
+
+      <div class="ai-orb" id="aiOrb"><i class="fa-solid fa-bolt"></i></div>
+      <div class="ai-header-info">
+        <h3>🤖 JOY AI</h3>
+        <p><span class="ai-online-dot"></span> Ask me anything about Joy</p>
+      </div>
+      <div class="ai-header-actions">
+        <button class="ai-icon-btn" id="aiVoiceOutBtn" title="Toggle voice replies" aria-pressed="false"><i class="fa-solid fa-volume-xmark"></i></button>
+        <button class="ai-icon-btn" id="aiThemeBtn" title="Toggle light / dark"><i class="fa-solid fa-moon"></i></button>
+        <button class="ai-icon-btn" id="aiClearBtn" title="Clear chat"><i class="fa-solid fa-broom"></i></button>
+        <button class="ai-icon-btn" id="aiCloseBtn" title="Close" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+
+    <div class="ai-messages" id="aiMessages" role="log" aria-live="polite"></div>
+
+    <div class="ai-suggested" id="aiSuggested">
+      <button class="ai-chip" data-q="Tell me about Joy"><i class="fa-solid fa-user"></i> Tell me about Joy</button>
+      <button class="ai-chip" data-q="What QA experience does Joy have?"><i class="fa-solid fa-clipboard-check"></i> QA experience</button>
+      <button class="ai-chip" data-q="Show her projects"><i class="fa-solid fa-diagram-project"></i> Show her projects</button>
+      <button class="ai-chip" data-q="Take me to the contact section"><i class="fa-solid fa-location-arrow"></i> Take me to Contact</button>
+      <button class="ai-chip" data-q="What programming languages does she know?"><i class="fa-solid fa-code"></i> Languages she knows</button>
+      <button class="ai-chip" data-q="Download her resume"><i class="fa-solid fa-download"></i> Download resume</button>
+      <button class="ai-chip" data-q="How can I contact Joy?"><i class="fa-solid fa-envelope"></i> Contact Joy</button>
+    </div>
+
+    <form class="ai-input-row" id="aiForm">
+      <button type="button" class="ai-mic-btn" id="aiMicBtn" title="Voice input" aria-label="Voice input"><i class="fa-solid fa-microphone"></i></button>
+      <textarea id="aiInput" rows="1" placeholder="Ask about Joy's skills, projects, experience…" aria-label="Message Joy AI"></textarea>
+      <button type="submit" class="ai-send-btn" id="aiSendBtn" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ SPACE CAT MASCOT ============ -->
+<div id="moonGround" aria-hidden="true"></div>
+
+<div id="spaceCat" class="space-cat" role="img" aria-label="Astronaut space cat mascot — drag me anywhere, click to hear a meow, double-click to make me jump.">
+  <div class="space-cat-tooltip">
+    <svg class="tooltip-arrow" viewBox="0 0 26 20"><path d="M24,2 C18,2 6,4 3,17"/></svg>
+    <span class="tooltip-icon">🐾</span>
+    <div class="tooltip-text">
+      <strong>Drag me anywhere!</strong>
+      <span>I'm a space cat explorer 🚀</span>
+    </div>
+  </div>
+  <div class="space-cat-speech" id="spaceCatSpeech">Meow! 🚀</div>
+
+  <div class="cat-visual">
+    <img id="spaceCatFrame" src="assets/images/mascot/1.webp" alt="Astronaut space cat walking" draggable="false" />
+  </div>
+</div>
+
+<!-- ============ THIRD-PARTY LIBRARIES (CDN) ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.clouds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- ============ LOCAL SCRIPTS ============ -->
+<script src="js/navbar.js"></script>
+<script src="js/typing.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/meteors.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/app.js"></script>
+<script src="js/mascot.js"></script>
+
+</body>
+</html>
