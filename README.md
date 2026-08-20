@@ -52,7 +52,7 @@ portfolio/
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/carlo-tano-portfolio.git
+git clone https://github.com/yourusername/mary-joy-lopez-portfolio.git
 ```
 
 2. Open the project folder.
