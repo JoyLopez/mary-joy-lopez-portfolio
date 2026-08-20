@@ -26,10 +26,10 @@ const skills = [
 ];
 
 const projects = [
-  { title:'Mathicsolve AI', desc:'AI-powered math scanner and solver that uses your camera to recognize mathematical problems and provide solutions with step-by-step explanations.', 
-    tags: ['AI', 'Math Scanner', 'OCR', 'Gemini AI', 'Computer Vision', 'React', 'TypeScript', 'Vite'], 
-    live: 'https://yantano.github.io/mathicsolve-ai/',
-    github: 'https://github.com/YanTano/mathicsolve-ai', 
+  { title:'Mathicsolve AI', desc:'Oopsverse: Mystery World Map is an interactive detective adventure game where players explore mysterious worlds, investigate cases, discover clues, interview witnesses, reconstruct timelines, identify culprits, and solve unique puzzles. Players can unlock new worlds, earn rewards, complete daily missions, and customize their detective as they progress.', 
+    tags: ['Mystery Game', 'Detective Game', 'Puzzle Game', 'Adventure Game', 'Investigation Game', 'Interactive Story', 'World Map', 'React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Game Development', 'Web Game', 'AI Game', 'Portfolio Project', 'Software QA', 'QA Engineer', 'Playwright', 'UI/UX', 'Indie Game'], 
+    live: 'https://joylopez.github.io/oops-verse-mystery-world-map/',
+    github: 'https://github.com/JoyLopez/oops-verse-mystery-world-map', 
     image: 'assets/images/projects/mathicsolve-ai.jpg'},
   
   { title:'Cat Run', desc:'A endless runner game where players dodge obstacles, collect fish, and compete for the highest score.', 
