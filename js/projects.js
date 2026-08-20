@@ -26,11 +26,11 @@ const skills = [
 ];
 
 const projects = [
-  { title:'Mathicsolve AI', desc:'Oopsverse: Mystery World Map is an interactive detective adventure game where players explore mysterious worlds, investigate cases, discover clues, interview witnesses, reconstruct timelines, identify culprits, and solve unique puzzles. Players can unlock new worlds, earn rewards, complete daily missions, and customize their detective as they progress.', 
+  { title:'Oops Verse Mystery World Map', desc:'Oopsverse: Mystery World Map is an interactive detective adventure game where players explore mysterious worlds, investigate cases, discover clues, interview witnesses, reconstruct timelines, identify culprits, and solve unique puzzles. Players can unlock new worlds, earn rewards, complete daily missions, and customize their detective as they progress.', 
     tags: ['Mystery Game', 'Detective Game', 'Puzzle Game', 'Adventure Game', 'Investigation Game', 'Interactive Story', 'World Map', 'React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Game Development', 'Web Game', 'AI Game', 'Portfolio Project', 'Software QA', 'QA Engineer', 'Playwright', 'UI/UX', 'Indie Game'], 
     live: 'https://joylopez.github.io/oops-verse-mystery-world-map/',
     github: 'https://github.com/JoyLopez/oops-verse-mystery-world-map', 
-    image: 'assets/images/projects/mathicsolve-ai.jpg'},
+    image: 'assets/images/projects/oopsversemysteryworldmap.png'},
   
   { title:'Cat Run', desc:'A endless runner game where players dodge obstacles, collect fish, and compete for the highest score.', 
     tags: ['React','TypeScript','Vite','Three.js','WebGL','Tailwind CSS'], 
