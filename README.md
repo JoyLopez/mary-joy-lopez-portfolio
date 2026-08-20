@@ -1,10 +1,10 @@
-# Carlo Tano Portfolio
+# Mary Joy Lopez Portfolio
 
 A modern, interactive, and responsive personal portfolio website showcasing my skills, projects, and experience as a **Software QA Engineer** and **Computer Engineer**.
 
 ## 🌐 Live Demo
 
- https://yantano.github.io/carlo-tano-portfolio/
+ https://joylopez.github.io/mary-joy-lopez-portfolio/
 
 ## 📸 Preview
 
@@ -63,13 +63,13 @@ No installation or build process is required.
 
 ## 👨‍💻 About Me
 
-I'm a Software QA Engineer and Computer Engineering graduate with experience in manual testing, automation testing, bug reporting, and web development. I enjoy building high-quality software and creating modern web experiences.
+I build reliable software by finding problems before users do. I help ensure applications meet quality standards through thorough testing, defect analysis, and continuously expanding my expertise in test automation.
 
 ## 📫 Contact
 
-- Email: tano.carlom@gmail.com
-- LinkedIn: https://linkedin.com/in/carlo-tano-7375bb1bb/
-- GitHub: https://github.com/YanTano
+- Email: yhadnielopez@gmail.com
+- LinkedIn: https://www.linkedin.com/in/maryjoy-lopez-925635349/
+- GitHub: https://github.com/JoyLopez/
 
 ---
 
