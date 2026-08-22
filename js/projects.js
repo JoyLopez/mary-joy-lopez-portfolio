@@ -50,11 +50,11 @@ const projects = [
     github: 'https://github.com/YanTano/neural-vision', 
     image: 'assets/images/projects/neural-vision.jpg'},
 
-  { title:'QA Automation Framework', desc:'A Playwright + TypeScript end-to-end test automation framework built with the Page Object Model, API test coverage, and CI-ready configs — clone it or grab the zip to bootstrap your own automation suite.', 
-    tags: ['Playwright', 'TypeScript', 'Node.js', 'Page Object Model', 'API Testing', 'CI/CD'], 
-    github: 'https://github.com/YanTano/qa-automation-framework',
-    download: 'https://github.com/YanTano/qa-automation-framework/archive/refs/heads/main.zip',
-    image: 'assets/images/projects/qa-automation-framework.jpg'},
+  { title:'QA Automation Technical Test – Playwright & Node.js', desc:'End-to-end QA automation project using Playwright and Node.js, featuring Page Object Model, Excel data-driven testing, dynamic field detection, and automated form validation.', 
+    tags: ['QA Automation', 'Playwright', 'TypeScript', 'Node.js', 'Page Object Model', 'JavaScript', 'CI/CD', 'Excel', 'E2E Testing', 'GitHub'], 
+    github: 'https://github.com/JoyLopez/the-automation-challenge',
+    download: 'https://github.com/JoyLopez/the-automation-challenge/archive/refs/heads/main.zip',
+    image: 'assets/images/projects/qa_automation_challenge.png'},
 
   { title:'E-Commerce Test Automation', desc:'Playwright automation suite covering checkout, payments, coupons, and inventory flows for an e-commerce site, with reusable fixtures and page objects — downloadable source included.', 
     tags: ['Playwright', 'TypeScript', 'Automation Testing', 'Regression Testing'], 
